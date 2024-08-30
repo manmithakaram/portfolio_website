@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</html>
+<body>
+    <div id="header">
+        <div class="container">
+                <nav>
+                    <img src="logo1.jpg"class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Certification</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text"><span>
+                    <p>Student</p>
+                    <h1>Hi, I'm <span>Manmitha Karam</span> <br>From Visakhapatnam</h1></span>
+                </div>
+        </div>
+    </div>
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="my_profile.jpg"></div>
+                <div class="about-col-2"><span><h1 class="sub-title">About Me</h1>
+                    <p>An enthusiastic engineering fresher who is capable to use technical skills for the betterment of the 
+                        organization. A bachelor's degree in engineering has enhanced my proficiency in developing applications and 
+                        looking forward to work in a competitive environment that enhances overall thinking.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link"onclick="opentab('education')">Education</p>
+                            <p class="tab-links"onclick="opentab('technicalskills')">Technical Skills</p>
+                            <p class="tab-links"onclick="opentab('otherskills')">Other Skills</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>BTech - CSE</span><br>Gayatri Vidya Parishad College Of Engineering(A)<br>2021-2025<br>8.25 CGPA</8.25></li>
+                                <li><span>Intermediate - MPC</span><br>Sasi New Gen Junior College<br>2019-2021<br>959/1000</li>
+                                <li><span>SSC</span><br>Vidya Vikas EM High School<br>2019<br>9.8 GPA</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="technicalskills">
+                            <ul>
+                                <li><span>Languages</span><br>C<br>Python<br>C++</8.25></li>
+                                <li><span>Web Technologies</span><br>HTML<br>CSS</li>
+                                <li><span>Miscellaneous</span><br>SQL<br>DBMS</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="otherskills">
+                            <ul>
+                                <li>Flexible & Adaptive</li>
+                                <li>Good Listener</li>
+                            </ul>
+                        </div>
+                </div></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="certifications">
+        <div class="container">
+            <h1 class="sub-title">Certifications</h1><br><br>
+                <ul class="certificates-list"><span>
+                    <li>Infosys Springboard Python Foundation</li>
+                    <li>AWS Cloud Foundation and AWS Machine Learning</li>
+                    <li>AICTE Fortinet Network Security</li>
+                </ul>
+            </span>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="portfolio-list"><span>
+                <div><h2><span>Movie Recommendation System</span></h2><br><p>Developed a machine learning-based movie recommendation system that suggests personalized movie recommendations to users based on their viewing history and preferences. The system leverages collaborative filtering techniques and content-based filtering to analyze user behavior and movie metadata. Implemented the project using Python, leveraging libraries such as TensorFlow, scikit-learn, and Pandas for data processing, model training, and evaluation. Deployed the recommendation engine as a web application using Flask, providing an interactive and user-friendly interface. Successfully enhanced user engagement by delivering relevant and timely movie suggestions.</p></div><br>
+                <div><h2><span>Emotion Detection using Facial Expression</span></h2><br><p>Developed a custom deep learning model using TensorFlow and Keras to detect and classify emotions from facial expressions. Designed and trained a convolutional neural network (CNN) with advanced data preprocessing and augmentation techniques, achieving [insert accuracy]% accuracy. Integrated the model into a real-time application for live emotion detection via camera input.</p></div>
+            </div></span>
+            </div>
+        </div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
